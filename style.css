@@ -9,6 +9,12 @@ COLOR PALETTE:
 */
 
 /* General Stuff */
+
+
+/* Fixes the bug where some png images are not transparent */
+img {
+	background-color: transparent;
+}
 * {
 	font-family: "Arial", sans-serif;
 	background-color: #f2f2f2;
@@ -17,15 +23,14 @@ COLOR PALETTE:
 .upper {
 	text-transform: uppercase;
 }
+.margin-0 * {
+	margin: 0;
+}
 /* Headings */
 .heading {
 	background-color: #05386b;
-	padding: 7px;
 	color: white;
-}
-/* Fixes the logo's background being white (since it is located inside the h2 tag) */
-.heading > img {
-	background-color: transparent;
+	padding-bottom: 7px;
 }
 /* Fixes the problem/s for the second title */
 .heading > .upper {
@@ -38,6 +43,12 @@ COLOR PALETTE:
 	color: #212121;
 	list-style-type: none;
 	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 7px;
+}
+.msg-channels-list li{
+	background-color: white;
+	padding: 2px;
 }
 .metadata {
 	color: #212121;
@@ -45,9 +56,6 @@ COLOR PALETTE:
 }
 .message {
 	color: #333333;
-	background-color: white;
-}
-h4 {
 	background-color: white;
 }
 
@@ -61,5 +69,10 @@ button {
 	color: #191919;
 }
 button:hover {
-	background-color: #51cc88;
+	background-color: #49bc7c;
+}
+.heading-buttons {
+	padding: 15px;
+	text-align: center;
+	background-color: white;
 }
