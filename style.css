@@ -1,0 +1,65 @@
+/*
+COLOR PALETTE:
+#f2f2f2 - Background;
+#05386b - Primary
+#212121 - Metadata & Channels
+#333333 - Text Messages
+#8ee4af - Accent Color
+#191919 - Accent Color Text
+*/
+
+/* General Stuff */
+* {
+	font-family: "Arial", sans-serif;
+	background-color: #f2f2f2;
+	line-height: 90%;
+}
+.upper {
+	text-transform: uppercase;
+}
+/* Headings */
+.heading {
+	background-color: #05386b;
+	padding: 7px;
+	color: white;
+}
+/* Fixes the logo's background being white (since it is located inside the h2 tag) */
+.heading > img {
+	background-color: transparent;
+}
+/* Fixes the problem/s for the second title */
+.heading > .upper {
+	background-color: inherit;
+	color: inherit;
+}
+
+
+.msg-channels-list {
+	color: #212121;
+	list-style-type: none;
+	background-color: white;
+}
+.metadata {
+	color: #212121;
+	font-size: medium;
+}
+.message {
+	color: #333333;
+	background-color: white;
+}
+h4 {
+	background-color: white;
+}
+
+/* Buttons */
+button {
+	background-color: #5cdb95;
+	border: none;
+	padding: 4px;
+	text-transform: uppercase;
+	transition: 0.3s;
+	color: #191919;
+}
+button:hover {
+	background-color: #51cc88;
+}
