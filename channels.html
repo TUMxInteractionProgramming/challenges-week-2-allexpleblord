@@ -3,31 +3,42 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="refresh" content="5" >
+	<meta http-equiv="refresh" content="3" >
 	<title>chatter|app</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="margin-0">
-		<!--- Top Heading --->
-		<h2 class="heading"><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" height="56px" alt="Aw, snap. Image cannot be loaded.">chatter|app</h2>
+	<div>
+		<!--- Top App Bar --->
+		<h2 class="app-bar"><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" height="56px" alt="Aw, snap. Image cannot be loaded.">chatter|app</h2>
 		<!--- Channels Area --->
 		<div>
 			<ul class="msg-channels-list">
-				<li><a href="chat.html">#GeneralChat</a><img src="https://ip.lfe.mw.tum.de/sections/star-o.png"></li>
-				<li>#Coding <img src="https://ip.lfe.mw.tum.de/sections/star.png"></li>
-				<li>#Gaming <img src="https://ip.lfe.mw.tum.de/sections/star.png"></li>
-				<li>#Advice <img src="https://ip.lfe.mw.tum.de/sections/star-o.png"></li>
-				<li>#Science <img src="https://ip.lfe.mw.tum.de/sections/star.png"></li>
+				<li class="chat" id="current-chat"><a href="chat.html">#GeneralChat</a><img src="https://ip.lfe.mw.tum.de/sections/star-o.png"></li>
+				<li class="chat">#Coding <img src="https://ip.lfe.mw.tum.de/sections/star.png"></li>
+				<li class="chat">#Gaming <img src="https://ip.lfe.mw.tum.de/sections/star.png"></li>
+				<li class="chat">#Advice <img src="https://ip.lfe.mw.tum.de/sections/star-o.png"></li>
+				<li class="chat">#Science <img src="https://ip.lfe.mw.tum.de/sections/star.png"></li>
 			</ul>
 		</div>
 
 
 		<!--- Buttons --->
-		<div class="heading-buttons">
-			<button type="button"><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png">New</button>
-			<button type="button"><img src="https://ip.lfe.mw.tum.de/sections/fire.png">Trending</button>
-			<button type="button"><img src="https://ip.lfe.mw.tum.de/sections/star-o.png">Favorites</button>
+		<div class="buttons">
+
+			<a class="channel-button" id="current-button" href="#">
+				<img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png">
+				<button type="button">New</button>
+			</a><!---
+		---><a class="channel-button" href="#">
+				<img src="https://ip.lfe.mw.tum.de/sections/fire.png">
+				<button type="button">Trending</button>
+			</a><!---
+		---><a class="channel-button" href="#">
+				<img src="https://ip.lfe.mw.tum.de/sections/star-o.png">
+				<button type="button">Favorites</button>
+			</a>
+
 		</div>
 	</div>
 </body>
