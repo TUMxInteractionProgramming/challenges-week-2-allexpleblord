@@ -6,111 +6,144 @@ COLOR PALETTE:
 #333333 - Text Messages
 #8ee4af - Accent Color
 #191919 - Accent Color Text
+
+I also put an indent before all the styles since Sublime Text lets me collapse and
+expand things under a comment which makes it really comfortable to work with and
+by putting an indent, it is easier to see each comment.
 */
 
-/* General Stuff */
+/* Font Import */
+	@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
-	font-family: "Arial", sans-serif;
-	background-color: #f2f2f2;
-	line-height: 90%;
-	margin: 0;
-	padding: 0;
-}
-.upper {
-	text-transform: uppercase;
-}
-a {
-	text-decoration: none;
-	background-color: inherit;
-	color: inherit;
-}
-img { /* Fixes the bug where some png images are not transparent */
-	background-color: transparent;
-}
+/* General Stuff */
+	* {
+		font-family: "Roboto", sans-serif;
+		background-color: #f2f2f2;
+		line-height: 90%;
+		margin: 0;
+		padding: 0;
+	}
+	.upper {
+		text-transform: uppercase;
+	}
+	li > a {
+		text-decoration: none;
+		background-color: inherit;
+		color: inherit;
+	}
+	h5 > a {
+		line-height: 125%; /* Fixes an issue which causes the link underline to disappear
+		due to the <big> tag of the timer */
+		color: #212121;
+	}
+	img { /* Fixes the bug where some png images are not transparent */
+		background-color: transparent;
+	}
+
 /* App Bars */
-.app-bar {
-	background-color: #05386b;
-	color: white;
-	padding-bottom: 7px;
-}
-.app-bar > .upper { /* Fixes the problem/s for the second title */
-	background-color: inherit;
-	color: inherit;
-}
+	.app-bar {
+		background-color: #05386b;
+		color: white;
+		padding-bottom: 7px;
+	}
+	.app-bar > .upper { /* Fixes the problem/s for the second title */
+		background-color: inherit;
+		color: inherit;
+	}
+
 /* Channels */
-.msg-channels-list {
-	color: #212121;
-	list-style-type: none;
-	background-color: white;
-	padding-top: 5px;
-	padding-bottom: 7px;
-}
-.msg-channels-list > li{
-	display: flex;
-	align-items: center;
-	background-color: white;
-	padding: 10px 25px;
-	margin: 0px 0px 5px 0;
-}
-.msg-channels-list > li > img {
-	margin-left: 5px;
-}
-#current-chat {
-	color: #05386b;
-	border-left: 3px solid #05386b;
-}
+	.msg-channels-list {
+		color: #212121;
+		list-style-type: none;
+		background-color: white;
+		padding: 15px 0;
+	}
+	.msg-channels-list > li{
+		display: flex;
+		align-items: center;
+		background-color: white;
+		padding: 10px 25px;
+		margin: 0px 0px 5px 0;
+	}
+	.msg-channels-list > li > img {
+		margin-left: 5px;
+	}
+	#current-chat {
+		color: #05386b;
+		border-left: 3px solid #05386b;
+	}
+
 /* Channels Hover Animation */
-.chat {
-	box-sizing: border-box;
-	transition: 100ms ease;
-	cursor: pointer;
-}
-.chat:hover {
-	color: #05386b;
-	border-left: 3px solid #05386b;
-}
+	.chat {
+		box-sizing: border-box;
+		transition: 100ms ease;
+		cursor: pointer;
+	}
+	.chat:hover {
+		color: #05386b;
+		border-left: 3px solid #05386b;
+	}
 
 /* Messages */
-.metadata {
-	color: #212121;
-	font-size: medium;
-}
-.message {
-	color: #333333;
-	background-color: white;
-}
+	.message-container {
+		margin: 25px 10px;
+	}
+	.metadata {
+		color: #212121;
+		font-size: medium;
+	}
+	.message {
+		color: #333333;
+		background-color: white;
+		padding: 20px 15px;
+	}
+	#own {
+		margin-left: 150px;
+	}
 
 /* Buttons */
-.channel-button {
-	width: 33.3333333%;
-	border: 0;
-	display: inline-block;
-	text-align: center;
-	background-color: white;
-	padding: 10px 0;
-	transition: 100ms ease;
-}
-.channel-button img {
-	margin: 0 auto;
-	align-content: center;
-	justify-content: justify;
-	display: block;
-}
-button {
-	cursor: pointer;
-	border: none;
-	background-color: inherit;
-}
-#current-button {
-	border-bottom: 3px solid #05386b;
-}
-#current-button > * {
-	color: #05386b;
-}
-.channel-button:hover {
-	border-bottom: 3px solid #05386b;
-}
-.channel-button:hover > * { /* Changes the color of the text inside the button to primary */
-	color: #05386b;
-}
+	.channel-button {
+		width: 33.3333333%;
+		border: 0;
+		display: inline-block;
+		text-align: center;
+		background-color: white;
+		padding: 10px 0;
+		transition: 100ms ease;
+	}
+	.channel-button img {
+		margin: 0 auto;
+		align-content: center;
+		justify-content: justify;
+		display: block;
+	}
+	button {
+		cursor: pointer;
+		border: none;
+		background-color: inherit;
+	}
+	#current-button {
+		border-bottom: 3px solid #05386b;
+	}
+	#current-button > * {
+		color: #05386b;
+	}
+	.channel-button:hover {
+		border-bottom: 3px solid #05386b;
+	}
+	.channel-button:hover > * { /* Changes the color of the text inside the button to primary */
+		color: #05386b;
+	}
+/* Five Minutes Buttons */
+	.five-min {
+		background-color: #5cdb95;
+		border: none;
+		padding: 4px;
+		text-transform: uppercase;
+		transition: 0.3s;
+		color: #191919;
+	}
+	.five-min:hover {
+		background-color: #51cc88;
+	}
+
