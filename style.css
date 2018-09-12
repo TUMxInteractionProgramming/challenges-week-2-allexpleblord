@@ -60,6 +60,16 @@ img { /* Fixes the bug where some png images are not transparent */
 	color: #05386b;
 	border-left: 3px solid #05386b;
 }
+/* Channels Hover Animation */
+.chat {
+	box-sizing: border-box;
+	transition: 100ms ease;
+	cursor: pointer;
+}
+.chat:hover {
+	color: #05386b;
+	border-left: 3px solid #05386b;
+}
 
 /* Messages */
 .metadata {
@@ -88,12 +98,19 @@ img { /* Fixes the bug where some png images are not transparent */
 	display: block;
 }
 button {
+	cursor: pointer;
 	border: none;
 	background-color: inherit;
 }
 #current-button {
 	border-bottom: 3px solid #05386b;
 }
+#current-button > * {
+	color: #05386b;
+}
 .channel-button:hover {
 	border-bottom: 3px solid #05386b;
+}
+.channel-button:hover > * { /* Changes the color of the text inside the button to primary */
+	color: #05386b;
 }
