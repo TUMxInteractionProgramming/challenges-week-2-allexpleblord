@@ -100,12 +100,14 @@ by putting an indent, it is easier to see each comment.
 	}
 
 /* Buttons */
+	.buttons {
+		background-color: white;
+	}
 	.channel-button {
 		width: 33.3333333%;
 		border: 0;
 		display: inline-block;
 		text-align: center;
-		background-color: white;
 		padding: 10px 0;
 	}
 	.channel-button img {
